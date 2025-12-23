@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ヘッダー -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="VoiD FX Settings"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="ヘルプ"
+                android:textSize="12sp"
+                android:background="#2196F3"
+                android:textColor="#ffffff"
+                android:onClick="showHelpDialog" />
+
+        </LinearLayout>
+
+        <!-- パフォーマンス設定 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#2d2d2d"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🚀 パフォーマンス設定"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- FPS設定 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="FPS設定"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/fpsSpinner"
+                        android:layout_width="120dp"
+                        android:layout_height="48dp"
+                        android:background="#404040"
+                        android:popupBackground="#404040" />
+
+                </LinearLayout>
+
+                <!-- FPS表示 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="FPS表示"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/showFpsSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- グラフィック設定 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#2d2d2d"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎨 グラフィック設定"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- DLSS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DLSS Frame Generation"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/dlssSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- アンチエイリアシング -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="アンチエイリアシング"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/antiAliasingSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- Vsync -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Vsync"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/vsyncSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- コスメティックストリーミング -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="コスメティックストリーミング"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/cosmeticStreamingSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- ビデオ再生 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ビデオ再生"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/videoPlaybackSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- モーションブラー -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="モーションブラー"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/motionBlurSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- 草表示 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="草表示"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/grassSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 警告テキスト -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FF5722"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/warningText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 適用ボタン -->
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="設定を適用"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="#4CAF50"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+</ScrollView>

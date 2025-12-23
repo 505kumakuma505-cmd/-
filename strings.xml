@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PixL Store - こうご版</string>
+    <string name="fortnite_description">Epic Gamesの人気バトルロワイヤルゲーム。120fps対応版で滑らかなゲームプレイを体験できます。</string>
+    <string name="voidfx_description">Fortnite用FPS設定ツール。30-360fpsまで対応し、グラフィック設定も細かく調整できます。</string>
+    
+    <!-- エラーメッセージ -->
+    <string name="error_download_failed">ダウンロードに失敗しました</string>
+    <string name="error_install_failed">インストールに失敗しました</string>
+    <string name="error_settings_not_found">設定ファイルが見つかりません</string>
+    <string name="error_permission_denied">権限が不足しています</string>
+    
+    <!-- 成功メッセージ -->
+    <string name="success_download">ダウンロードが完了しました</string>
+    <string name="success_install">インストールが完了しました</string>
+    <string name="success_settings_applied">設定が適用されました</string>
+    
+    <!-- 確認メッセージ -->
+    <string name="confirm_download">このアプリをダウンロードしますか？</string>
+    <string name="confirm_install">このアプリをインストールしますか？</string>
+    <string name="confirm_apply_settings">設定を適用しますか？</string>
+    
+    <!-- ボタン -->
+    <string name="button_download">ダウンロード</string>
+    <string name="button_install">インストール</string>
+    <string name="button_launch">起動</string>
+    <string name="button_apply">適用</string>
+    <string name="button_cancel">キャンセル</string>
+    <string name="button_ok">OK</string>
+    
+    <!-- 設定項目 -->
+    <string name="setting_fps">FPS設定</string>
+    <string name="setting_show_fps">FPS表示</string>
+    <string name="setting_dlss">DLSS Frame Generation</string>
+    <string name="setting_anti_aliasing">アンチエイリアシング</string>
+    <string name="setting_vsync">Vsync</string>
+    <string name="setting_cosmetic_streaming">コスメティックストリーミング</string>
+    <string name="setting_video_playback">ビデオ再生</string>
+    <string name="setting_motion_blur">モーションブラー</string>
+    <string name="setting_grass">草表示</string>
+</resources>

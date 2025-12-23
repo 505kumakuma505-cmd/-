@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a1a1a">
+
+    <!-- ヘッダー -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#2d2d2d"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PixL Store"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="+ 手動追加"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:background="#4CAF50"
+            android:onClick="showManualUrlDialog" />
+
+    </LinearLayout>
+
+    <!-- メインコンテンツ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 説明テキスト -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#2d2d2d"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🎮 PixL Store - こうご専用版"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fortnite 120fps化ツール統合版\n• 30-360fps対応\n• VoiD FX機能内蔵\n• 自動APK管理"
+                        android:textSize="14sp"
+                        android:textColor="#cccccc"
+                        android:lineSpacingExtra="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⚠️ 使用は自己責任です。BANされる可能性があります。"
+                        android:textSize="12sp"
+                        android:textColor="#FF5722"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- アプリリスト -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
